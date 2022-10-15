@@ -1,0 +1,8 @@
+:root { 
+  font-family: $font;
+  background-color: $back-grey;
+}
+
+@supports (font-variation-settings: normal) {
+  :root { font-family: $font_var }
+}

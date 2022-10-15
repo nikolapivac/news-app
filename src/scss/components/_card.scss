@@ -1,0 +1,47 @@
+.card {
+    width: 320px;
+    height: 252px;
+    border-radius: 8px;
+    box-shadow: $shadow;
+    display: flex;
+    flex-direction: column;
+
+    img {
+        width: 320px;
+        height: 140px;
+        object-fit: cover;
+        border-radius: 8px 8px 0 0;
+    }
+
+    #{&}_info {
+        height: 112px;
+        background-color: $white;
+        border-radius: 0 0 8px 8px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .category{
+            font-size: 10px;
+            margin: 0;
+            padding: 12px 0 2px 12px;
+            text-transform: uppercase;
+            color: $blue;
+            font-weight: bold;
+        }
+
+        .title {
+            font-size: 16px;
+            margin: 0;
+            padding: 0 12px 11px 12px;
+            font-weight: normal;
+        }
+
+        .author {
+            font-size: 12px;
+            margin: 0;
+            padding: 0 0 16px 12px;
+        }
+
+    }
+}

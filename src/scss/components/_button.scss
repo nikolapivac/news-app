@@ -1,0 +1,18 @@
+button {
+    width: 95px;
+    height: 40px;
+    border-radius: 6px;
+    background-color: $red;
+    border: none;
+    color: $white;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 20px;
+    text-align: center;
+    margin: 5px 5px 5px 0;
+}
+
+.btn_container {
+    background-color: $white;
+    border-radius: 0 6px 6px 0;
+}

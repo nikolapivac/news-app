@@ -1,0 +1,28 @@
+.header {
+    display: flex;
+    align-items: center;
+
+    .logo {
+        display: flex;
+        font-size: 32px;
+        line-height: 39px;
+        margin: 40px 0 0 175px;
+
+        .logo_1 {
+            color: $red;
+            font-weight: 900;
+        }
+
+        .logo_2 {
+            color: $black;
+            font-weight: 900;
+        }
+    }
+
+    .search {
+        display: flex;
+        align-items: center;
+        margin: 35px 358px 0 43px;
+    }
+}
+

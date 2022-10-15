@@ -13,9 +13,11 @@ const Search = ({ searchArticles }) => {
     };
 
     return (
-        <div>
+        <div className="search">
             <input type="text" placeholder="Search news" value={term} onChange={handleChange} />
-            <button onClick={handleSubmit} type="submit">Search</button>
+            <div className="btn_container">
+                <button onClick={handleSubmit} type="submit">SEARCH</button>
+            </div>
         </div>
     )
 
