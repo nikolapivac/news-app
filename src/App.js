@@ -1,24 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useState, useEffect } from "react";
+import Articles from "./components/Articles";
+import axios from "axios";
+import Search from "./components/Search";
 
-function App() {
+const App = () => {
+  const [articles, setArticles] = useState([]);
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    const fetchArticles = async () => {
+      setLoading(true);
+      const res = await axios.get(`https://api.nytimes.com/svc/search/v2/articlesearch.json?&sort=newest&api-key=6iBICR8GSq0N3mNGtSD3GLIATG0gzYZ9`);
+      setArticles(res.data.response.docs);
+
+      setLoading(false);
+    }
+
+    fetchArticles();
+  }, [])
+
+  const searchArticles = async (term) => {
+    setLoading(true);
+    const res = await axios.get(`https://api.nytimes.com/svc/search/v2/articlesearch.json?q=${term}&sort=newest&api-key=6iBICR8GSq0N3mNGtSD3GLIATG0gzYZ9`);
+    setArticles(res.data.response.docs);
+
+    setLoading(false);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Search searchArticles={searchArticles} />
+      <Articles loading={loading} articles={articles} />
+    </>
   );
 }
 
