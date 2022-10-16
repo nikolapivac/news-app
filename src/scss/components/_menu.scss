@@ -1,0 +1,46 @@
+.menu {
+    @include flexCenter(column);
+    width: 63px;
+    height: 429px;
+    margin: 59px 0 0 175px;
+
+    .menu_item{
+        width: 63px;
+        height: 63px;
+        border-radius: 5px;
+        @include flexCenter(column);
+
+        &.active{
+            background-color: $white;
+            box-shadow: $shadow;
+        }
+
+        .icon {
+            width: 20px;
+            height: 20px;
+            color: $dark-grey;
+            opacity: 0.5;
+            padding: 13px 22px 0 22px;
+
+            &.active {
+                color: $red;
+                opacity: 1;
+            }
+        }
+
+        p {
+            font-size: 10px;
+            line-height: 14px;
+            letter-spacing: 0.1px;
+            color: $dark-grey;
+            mix-blend-mode: normal;
+            opacity: 0.5;
+            text-align: center;
+
+            &.active {
+                color: $red;
+                opacity: 1;
+            }
+        }
+    }
+}

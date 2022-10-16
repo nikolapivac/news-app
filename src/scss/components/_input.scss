@@ -2,10 +2,19 @@ input {
     width: 625px;
     height: 48px;
     font-size: 15px;
-    padding-left: 50px;
-    border-radius: 10px 0 0 10px;
+    padding-left: 15px;
     border: none;
     color: $black;
     background-color: $white;
     mix-blend-mode: normal;
+    outline: none;
+}
+
+.search_icon {
+    width: 19.5px;
+    height: 19.5px;
+    color: $light-grey;
+    background-color: $white;
+    padding: 15px 0 15px 15px;
+    border-radius: 10px 0 0 10px;
 }

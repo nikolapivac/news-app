@@ -6,3 +6,7 @@
 @supports (font-variation-settings: normal) {
   :root { font-family: $font_var }
 }
+
+a {
+  text-decoration: none;
+}
