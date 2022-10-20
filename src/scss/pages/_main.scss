@@ -1,31 +1,13 @@
-.header {
+.main_container {
     display: flex;
-    align-items: center;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 50px 0 0 175px;
+}
 
-    .logo {
-        display: flex;
-        margin: 40px 0 0 175px;
-
-        .logo_1 {
-            color: $red;
-            font-size: 32px;
-            line-height: 39px;
-            font-weight: 900;
-        }
-
-        .logo_2 {
-            color: $black;
-            font-size: 32px;
-            line-height: 39px;
-            font-weight: 900;
-        }
-    }
-
-    .search {
-        display: flex;
-        align-items: center;
-        margin: 35px 358px 0 43px;
-    }
+.news_container {
+    display: flex;
+    flex-direction: column;
 }
 
 .category_title {
@@ -33,56 +15,21 @@
     line-height: 24px;
     letter-spacing: -0.153px;
     color: $black;
-    padding: 0 0 16px 25px;
+    padding: 0 0 16px 0;
 }
 
-.latest {
-    width: 321px;
-    height: 529px;
-    background-color: $white;
-    box-shadow: $shadow;
-    border-radius: 8px;
-
-    #{&}_head {
-        display: flex;
-        align-items: center;
-
-        .licon{
-            color: $red;
-            width: 20px;
-            height: 20px;
-            padding: 15px 0 0 15px;
-        }
-    }
-
-    #{&}_title{
-        font-size: 16px;
-        line-height: 20px;
-        letter-spacing: -0.11px;
-        padding: 18px 0 0 10px;
-    }
-
-    #{&}_article {
-        width: 281px;
-
-        h1 {
-            font-size: 16px;
-            line-height: 20px;
-            letter-spacing: -0.11px;
-            padding: 3px 25px 28px 15px;
-            font-weight: normal;
-            margin: 0;
-        }
-
-        p {
-            font-size: 10px;
-            font-weight: bold;
-            color: $blue;
-            line-height: 16px;  
-            letter-spacing: -0.0153846px;
-            text-transform: uppercase;
-            padding: 14px 0 0 15px;
-            margin: 0;
-        }
-    }
+.main_top{
+    display: flex;
+    gap: 22px;
+    margin: 0 171px 22px 0;
 }
+
+.article_grid_small {
+    @include gridSmall;
+}
+
+.article_grid_big{
+    @include gridBig;
+    margin: 0 171px 42px 0;
+}
+

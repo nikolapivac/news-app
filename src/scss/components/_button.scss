@@ -20,3 +20,37 @@ button {
     background-color: $white;
     border-radius: 0 6px 6px 0;
 }
+
+.bookmark_btn {
+    width: 36px;
+    height: 36px;
+    margin: 0;
+    background-color: $white;
+}
+
+.book-gold {
+    color: $gold;
+    cursor: pointer;
+}
+
+.book-grey {
+    color: $light-grey;
+    cursor: pointer;
+}
+
+.get {
+    width: 69px;
+    height: 40px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    background-color: $white;
+    color: $black;
+    font-size: 14px;
+}
+
+.nothanks {
+    width: 90px;
+    height: 20px;
+    font-size: 14px;
+    background: none;
+}
