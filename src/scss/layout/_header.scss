@@ -2,6 +2,26 @@
     display: flex;
     align-items: center;
 
+    @media screen and (max-width:$mobile-breakpoint) {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #{&}_top{
+        display: flex;
+    }
+
+    .bars{
+        width: 34px;
+        height: 24px;
+        color: $black;
+        margin: 29px 16px 0 186px;
+
+        @media screen and (min-width:$mobile-breakpoint) {
+            display: none;
+        }
+    }
+
     .logo {
         display: flex;
         margin: 40px 0 0 175px;
@@ -19,11 +39,29 @@
             line-height: 39px;
             font-weight: 900;
         }
+
+        @media screen and (max-width:$mobile-breakpoint) {
+            margin: 0 0 0 16px;
+        }
     }
 
     .search {
         display: flex;
         align-items: center;
         margin: 35px 358px 0 43px;
+
+        @media screen and (max-width:$mobile-breakpoint) {
+            margin: 0 16px;
+        }
+    }
+
+    .mobile_menu {
+        align-self: center;
+        padding-top: 32px;
+
+        @media screen and (min-width:$mobile-breakpoint) {
+            display: none;
+        }
+
     }
 }

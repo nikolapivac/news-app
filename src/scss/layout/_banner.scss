@@ -1,4 +1,5 @@
 .banner {
+    width: 1440px;
     height: 60px;
     display: flex;
     justify-content: space-between;
@@ -24,6 +25,10 @@
     }
 
     &.hidden{
+        display: none;
+    }
+
+    @media screen and (max-width: $mobile-breakpoint) {
         display: none;
     }
 }

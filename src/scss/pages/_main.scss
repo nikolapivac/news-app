@@ -3,11 +3,19 @@
     justify-content: space-between;
     align-items: baseline;
     padding: 50px 0 0 175px;
+
+    @media screen and (max-width: $mobile-breakpoint){
+        padding: 16px;
+    }
 }
 
 .news_container {
     display: flex;
     flex-direction: column;
+
+    @media screen and (max-width: $mobile-breakpoint){
+        display: flex;
+    }
 }
 
 .category_title {
@@ -16,6 +24,16 @@
     letter-spacing: -0.153px;
     color: $black;
     padding: 0 0 16px 0;
+
+    @media screen and (max-width: $mobile-breakpoint){
+        display: none;
+    }
+}
+
+.main {
+    @media screen and (max-width:$mobile-breakpoint) {
+        width: 374px;
+    }
 }
 
 .main_top{
@@ -26,10 +44,20 @@
 
 .article_grid_small {
     @include gridSmall;
+
+    @media screen and (max-width: $mobile-breakpoint){
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 .article_grid_big{
     @include gridBig;
     margin: 0 171px 42px 0;
+
+    @media screen and (max-width: $mobile-breakpoint){
+        display: flex;
+        flex-direction: column;
+    }
 }
 

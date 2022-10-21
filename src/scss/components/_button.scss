@@ -36,6 +36,10 @@ button {
 .book-grey {
     color: $light-grey;
     cursor: pointer;
+
+    &:hover {
+        transform: scale(1.2);
+    }
 }
 
 .get {
@@ -46,6 +50,10 @@ button {
     background-color: $white;
     color: $black;
     font-size: 14px;
+
+    &:hover {
+        transform: scale(1.1);
+    }
 }
 
 .nothanks {
@@ -53,4 +61,22 @@ button {
     height: 20px;
     font-size: 14px;
     background: none;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+.mobtn {
+    background: none;
+    color: $black;
+    font-size: 16px;
+    letter-spacing: -0.0246154px;
+
+    &.active{
+        width: 102px;
+        background-color: $light-red;
+        color: $red;
+        border-radius: 20px;
+    }
 }

@@ -8,6 +8,10 @@ input {
     background-color: $white;
     mix-blend-mode: normal;
     outline: none;
+
+    @media screen and (max-width: $mobile-breakpoint){
+        width: 200px;
+    }
 }
 
 .search_icon {

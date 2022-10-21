@@ -5,10 +5,10 @@
     align-items: center;
 }
 
-@mixin flexBetween {
+@mixin flexBetween($direction) {
     display: flex;
+    flex-direction: $direction;
     justify-content: space-between;
-    align-items: center;
 }
 
 @mixin gridBig {
@@ -22,3 +22,4 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 22px;
 }
+

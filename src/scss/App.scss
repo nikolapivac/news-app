@@ -6,10 +6,11 @@
 @import "components/input";
 @import "components/button";
 @import "components/card";
-@import "components/menu";
-@import "components/latest";
+@import "components/loading";
 
 @import "layout/header";
 @import "layout/banner";
+@import "layout/menu";
+@import "layout/latest";
 
 @import "pages/main";
