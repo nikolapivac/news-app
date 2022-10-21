@@ -18,10 +18,12 @@ const Article = ({article}) => {
             `https://nytimes.com/${article.multimedia[0].url}` :
             'https://upload.wikimedia.org/wikipedia/commons/4/40/New_York_Times_logo_variation.jpg'} alt="news_img"/>
             <div className="card_info">
-                <p className="category">{article.section_name}</p>
-                <h1 className="title">{article.headline.main}</h1>
+                <div className="card_top">
+                    <p className="category">{article.section_name}</p>
+                    <h1 className="title">{article.headline.main}</h1>
+                </div>
                 <div className="card_bottom">
-                    <p className="author">{article.byline.original}</p>
+                    <p className="author">{article.byline.original.slice(3)}</p>
                     {
                         isBookmarked(article._id) ? 
                         <button className="bookmark_btn" onClick={() => removeFromBookmarked(article._id)}><FontAwesomeIcon className="book-gold" icon={faStar} /></button>
