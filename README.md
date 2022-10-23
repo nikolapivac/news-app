@@ -1,10 +1,17 @@
-# Getting Started with Create React App
+# News App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Building a simple frontend application using React and Sass/SCSS.
+The app contains a "homepage" for all articles grouped by categories and sorted chronologically.
 
-## Available Scripts
+The "Latest News" widget implements infinite scroll functionality (React Infinite Scroll). Each category is clickable and leads to a category page (made using React Router). The app has a search filter for the article list.
+
+Users can bookmark their favorite articles. This was made possible by using React's UseContext hook and storing the bookmarked articles in local (browser) storage.
+
+## Instructions
 
 In the project directory, you can run:
+
+### `npm install`
 
 ### `npm start`
 
