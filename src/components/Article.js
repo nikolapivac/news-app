@@ -23,7 +23,7 @@ const Article = ({article}) => {
                     <h1 className="title">{article.headline.main}</h1>
                 </div>
                 <div className="card_bottom">
-                    <p className="author">{article.byline.original.slice(3)}</p>
+                    <p className="author">{article.byline.original}</p>
                     {
                         isBookmarked(article._id) ? 
                         <button className="bookmark_btn" onClick={() => removeFromBookmarked(article._id)}><FontAwesomeIcon className="book-gold" icon={faStar} /></button>

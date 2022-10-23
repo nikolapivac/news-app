@@ -18,10 +18,17 @@
         letter-spacing: 1px;
         font-weight: normal;
     }
+
+    @media screen and (max-width: $mobile-breakpoint){
+        padding: 48px 0 0 120px;
+    }
 }
 
 .no_articles {
-    @include flexCenter(column);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     padding: 0 500px 0 300px;
 
     .newspaper{
@@ -33,6 +40,10 @@
         font-size: 24px;
         letter-spacing: 1px;
         font-weight: normal;
+    }
+
+    @media screen and (max-width: $mobile-breakpoint){
+        padding: 48px 0 0 40px;
     }
 }
 

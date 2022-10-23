@@ -15,7 +15,7 @@ const App = () => {
   const [category, setCategory] = useState("");
   const [index, setIndex] = useState(0);
 
-  const { bookmarked } = useAppContext();
+  const { bookmarked, mobile, toggleFeaturedLatest, handleMenu } = useAppContext();
 
   useEffect(() => {
     const fetchArticles = async () => {
@@ -36,6 +36,10 @@ const App = () => {
   const handleCategoryChange = (categoryName, i) => {
     setCategory(categoryName);
     setIndex(i);
+    if(mobile){
+      toggleFeaturedLatest("latest", 0);
+      handleMenu("menu");
+    }
   }
 
   //Search 
@@ -54,7 +58,7 @@ const App = () => {
   return (
     <BrowserRouter>
       <Banner />
-      <Header searchArticles={searchArticles} />
+      <Header searchArticles={searchArticles} articles={articles} index={index}/>
       <div className="main_container">
         <Menu handleCategoryChange={handleCategoryChange} index={index} />
         <Routes>
