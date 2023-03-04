@@ -56,7 +56,7 @@ const App = () => {
   }
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/news-app">
       <Banner />
       <Header searchArticles={searchArticles} articles={articles} index={index}/>
       <div className="main_container">
